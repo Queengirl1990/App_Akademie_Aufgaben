@@ -15,11 +15,11 @@ void main() {
   final sentenceCount = countSentences(selectedText);
   final textLength = selectedText.length;
 
-  print('Zufällig ausgewählter Satz/Wort:');
-  print('Eingegebener Text: $selectedText');
-  print('Anzahl der Wörter: $wordCount');
-  print('Anzahl der Sätze: $sentenceCount');
-  print('Gesamtlänge des Textes: $textLength');
+  print("Zufällig ausgewählter Satz/Wort:");
+  print("Eingegebener Text: $selectedText");
+  print("Anzahl der Wörter: $wordCount");
+  print("Anzahl der Sätze: $sentenceCount");
+  print("Gesamtlänge des Textes: $textLength");
 }
 
 String getRandomItem(List<String> items, Random random) {
