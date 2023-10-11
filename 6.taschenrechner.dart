@@ -60,12 +60,12 @@ void main() {
         break;
     }
 
-    print('Das Ergebnis ist: $result');
+    print("Das Ergebnis ist: $result");
 
-    print('Nochmal? (j/n)');
+    print("Nochmal? (j/n)");
     String? input = stdin.readLineSync()?.toLowerCase();
-    if (input != 'j') {
-      print('Programm wird beendet.');
+    if (input != "j") {
+      print("Programm wird beendet.");
       continueCalculating = false;
     }
   }
