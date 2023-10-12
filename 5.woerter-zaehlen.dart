@@ -2,7 +2,7 @@ import 'dart:math';
 
 void main() {
   final textList = [
-    "To tell you I was wrong, but you already know. Believe me, I won't stop at nothing to see you. So I've started running",
+    "To tell you I was wrong, but you already know. Believe me, I won't stop at nothing to see you. So I've started running.",
     "Kann sich ein Leben von heute auf morgen komplett verändern? Kann ein Mann ihre Welt aus den Fugen geraten lassen und welches Geheimnis kann Alexandras gesamte Gedankenwelt in Frage stellen?",
     "Wie geht es dir heute?",
     "Apfelkuchen Hundewiese Hammerzeh Apfel Kindergarten"
