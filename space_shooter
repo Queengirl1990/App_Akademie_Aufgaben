@@ -1,0 +1,76 @@
+import 'dart:math'; 
+
+class spaceBattle{
+  List<int> actions;
+  
+  // Konstruktor
+  spaceBattle(this.actions);
+  
+  void act(){    
+ 
+    for(int i = 0; i <= actions.length-1; i++){
+      if(actions[i] == 1) {
+        print("\nDer Spieler fügt jedem feindlichen Raumschiff 10 Schaden zu");
+        enemy().gotDamage();
+        if(enemy().isAlive() == false && player().isAlive() == true) { print("\nPlayer Wins"); break;}
+        if(enemy().isAlive() == false || player().isAlive() == false) { print("\nBeide kamen mit dem Leben grad noch so davon"); break;}
+      }
+      if(actions[i] == 0) {
+        print("\nDie feindlichen Raumschiffe fügen dem Spieler 10 Schaden zu");
+        player().gotDamage();
+        if(player().isAlive() == false && enemy().isAlive() == true) { print("\nEnemy Wins"); break;}
+        if(player().isAlive() == false || enemy().isAlive() == false) { print("\nBeide kamen mit dem Leben grad noch so davon"); break;}
+      }
+    } 
+  }
+}
+
+int playerHP = 100;
+
+class player{
+
+  void gotDamage(){
+    playerHP-=10;
+    print("Player HP: $playerHP");
+  }
+  
+  bool isAlive(){
+    if(playerHP <= 0){
+      return false;
+    }
+    else {
+      return true;
+    }
+  } 
+}
+
+int enemyHP = 100;
+
+class enemy{
+  
+  void gotDamage(){
+    enemyHP -=10;
+    print("Enemy HP: $enemyHP");
+  }
+  
+  bool isAlive(){
+    if(enemyHP <= 0){
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
+}
+
+void main() {
+  
+// Random Liste
+List<int> randomList = [];
+for (int i = 1; i <= 50; i++){
+  int rnd = Random().nextInt(2);
+  randomList.add(rnd); 
+}
+  // Let's make some noise ;)  
+  spaceBattle(randomList).act();  
+}
